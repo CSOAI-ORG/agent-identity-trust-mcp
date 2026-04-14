@@ -1,8 +1,49 @@
 name: agent-identity-trust-mcp
-description: MEOK AI Labs — agent identity trust
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/agent-identity-trust-mcp
-license: MIT
-runtime: python
-entrypoint: server.py
+description: "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for\
+  \ everyone."
+version: 1.0.0
+tools:
+- name: register_agent_identity
+  description: Register an agent with a decentralized identifier (DID) and capability
+    attestation.
+  parameters:
+  - name: agent_name
+    type: string
+    required: true
+  - name: capabilities
+    type: string
+    required: true
+  - name: organization
+    type: string
+    required: false
+- name: issue_credential
+  description: Issue a verifiable credential to an agent (compliance cert, capability
+    proof, etc.).
+  parameters:
+  - name: agent_did
+    type: string
+    required: true
+  - name: credential_type
+    type: string
+    required: true
+  - name: claims
+    type: string
+    required: true
+- name: verify_credential
+  description: Verify a credential is valid and not expired.
+  parameters:
+  - name: credential_id
+    type: string
+    required: true
+- name: get_agent_reputation
+  description: Get an agent's reputation score and history.
+  parameters:
+  - name: agent_did
+    type: string
+    required: true
+- name: list_registered_agents
+  description: List all registered agents, optionally filtered by organization.
+  parameters:
+  - name: organization
+    type: string
+    required: false
