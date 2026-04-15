@@ -1,6 +1,6 @@
 {
   "name": "agent-identity-trust-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Agent Identity. DIDs, verifiable credentials, reputation scoring. Agent passports for",
+  "description": "Agent Identity Trust tools for AI agents. Capabilities: register agent identity, issue credential, verify credential. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
