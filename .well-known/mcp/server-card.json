@@ -1,0 +1,58 @@
+{
+  "name": "agent-identity-trust",
+  "description": "MEOK AI Labs \u2014 Agent Identity. DIDs, verifiable credentials, reputation scoring. Agent passports for the MCP ecosystem.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/agent-identity-trust-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "register_agent_identity",
+      "description": "Register an agent with a decentralized identifier (DID) and capability attestation."
+    },
+    {
+      "name": "issue_credential",
+      "description": "Issue a verifiable credential to an agent (compliance cert, capability proof, etc.)."
+    },
+    {
+      "name": "verify_credential",
+      "description": "Verify a credential is valid and not expired."
+    },
+    {
+      "name": "get_agent_reputation",
+      "description": "Get an agent's reputation score and history."
+    },
+    {
+      "name": "list_registered_agents",
+      "description": "List all registered agents, optionally filtered by organization."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Agent Infrastructure",
+    "Gaming & Entertainment"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
