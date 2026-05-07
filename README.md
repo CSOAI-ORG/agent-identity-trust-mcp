@@ -1,3 +1,7 @@
+[![agent-identity-trust-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-identity-trust-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-identity-trust-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/agent-identity-trust-mcp)](https://pypi.org/project/agent-identity-trust-mcp/)
+
 [![agent-identity-trust-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-identity-trust-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-identity-trust-mcp)
 
 <div align="center">
