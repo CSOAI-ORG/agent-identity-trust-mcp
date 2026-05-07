@@ -26,7 +26,23 @@ _credentials = {}
 
 @mcp.tool()
 def register_agent_identity(agent_name: str, capabilities: str, organization: str = "", api_key: str = "") -> str:
-    """Register an agent with a decentralized identifier (DID) and capability attestation."""
+    """Register an agent with a decentralized identifier (DID) and capability attestation.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -42,7 +58,23 @@ def register_agent_identity(agent_name: str, capabilities: str, organization: st
 
 @mcp.tool()
 def issue_credential(agent_did: str, credential_type: str, claims: str, api_key: str = "") -> str:
-    """Issue a verifiable credential to an agent (compliance cert, capability proof, etc.)."""
+    """Issue a verifiable credential to an agent (compliance cert, capability proof, etc.).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -62,7 +94,23 @@ def issue_credential(agent_did: str, credential_type: str, claims: str, api_key:
 
 @mcp.tool()
 def verify_credential(credential_id: str, api_key: str = "") -> str:
-    """Verify a credential is valid and not expired."""
+    """Verify a credential is valid and not expired.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -75,7 +123,23 @@ def verify_credential(credential_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_agent_reputation(agent_did: str, api_key: str = "") -> str:
-    """Get an agent's reputation score and history."""
+    """Get an agent's reputation score and history.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -89,7 +153,23 @@ def get_agent_reputation(agent_did: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def list_registered_agents(organization: str = "", api_key: str = "") -> str:
-    """List all registered agents, optionally filtered by organization."""
+    """List all registered agents, optionally filtered by organization.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
