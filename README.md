@@ -1,3 +1,5 @@
+[![agent-identity-trust-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-identity-trust-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-identity-trust-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/agent-identity-trust-mcp)](https://github.com/CSOAI-ORG/agent-identity-trust-mcp/stargazers)
