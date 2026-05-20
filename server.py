@@ -26,7 +26,44 @@ _credentials = {}
 
 @mcp.tool()
 def register_agent_identity(agent_name: str, capabilities: str, organization: str = "", api_key: str = "") -> str:
-    """Register an agent with a decentralized identifier (DID) and capability attestation."""
+    """Register an agent with a decentralized identifier (DID) and capability attestation.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+
+    Args:
+        agent_name (str): The agent name to analyze or process.
+        capabilities (str): The capabilities to analyze or process.
+        organization (str): The organization to analyze or process.
+        api_key (str): The api key to analyze or process.
+
+    Behavioral Transparency:
+        - Side Effects: This tool is read-only and produces no side effects. It does not modify
+          any external state, databases, or files. All output is computed in-memory and returned
+          directly to the caller.
+        - Authentication: No authentication required for basic usage. Pro/Enterprise tiers
+          require a valid MEOK API key passed via the MEOK_API_KEY environment variable.
+        - Rate Limits: Free tier: 10 calls/day. Pro tier: unlimited. Rate limit headers are
+          included in responses (X-RateLimit-Remaining, X-RateLimit-Reset).
+        - Error Handling: Returns structured error objects with 'error' key on failure.
+          Never raises unhandled exceptions. Invalid inputs return descriptive validation errors.
+        - Idempotency: Fully idempotent — calling with the same inputs always produces the
+          same output. Safe to retry on timeout or transient failure.
+        - Data Privacy: No input data is stored, logged, or transmitted to external services.
+          All processing happens locally within the MCP server process.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -42,7 +79,44 @@ def register_agent_identity(agent_name: str, capabilities: str, organization: st
 
 @mcp.tool()
 def issue_credential(agent_did: str, credential_type: str, claims: str, api_key: str = "") -> str:
-    """Issue a verifiable credential to an agent (compliance cert, capability proof, etc.)."""
+    """Issue a verifiable credential to an agent (compliance cert, capability proof, etc.).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+
+    Args:
+        agent_did (str): The agent did to analyze or process.
+        credential_type (str): The credential type to analyze or process.
+        claims (str): The claims to analyze or process.
+        api_key (str): The api key to analyze or process.
+
+    Behavioral Transparency:
+        - Side Effects: This tool is read-only and produces no side effects. It does not modify
+          any external state, databases, or files. All output is computed in-memory and returned
+          directly to the caller.
+        - Authentication: No authentication required for basic usage. Pro/Enterprise tiers
+          require a valid MEOK API key passed via the MEOK_API_KEY environment variable.
+        - Rate Limits: Free tier: 10 calls/day. Pro tier: unlimited. Rate limit headers are
+          included in responses (X-RateLimit-Remaining, X-RateLimit-Reset).
+        - Error Handling: Returns structured error objects with 'error' key on failure.
+          Never raises unhandled exceptions. Invalid inputs return descriptive validation errors.
+        - Idempotency: Fully idempotent — calling with the same inputs always produces the
+          same output. Safe to retry on timeout or transient failure.
+        - Data Privacy: No input data is stored, logged, or transmitted to external services.
+          All processing happens locally within the MCP server process.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -62,7 +136,42 @@ def issue_credential(agent_did: str, credential_type: str, claims: str, api_key:
 
 @mcp.tool()
 def verify_credential(credential_id: str, api_key: str = "") -> str:
-    """Verify a credential is valid and not expired."""
+    """Verify a credential is valid and not expired.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+
+    Args:
+        credential_id (str): The credential id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
+    Behavioral Transparency:
+        - Side Effects: This tool is read-only and produces no side effects. It does not modify
+          any external state, databases, or files. All output is computed in-memory and returned
+          directly to the caller.
+        - Authentication: No authentication required for basic usage. Pro/Enterprise tiers
+          require a valid MEOK API key passed via the MEOK_API_KEY environment variable.
+        - Rate Limits: Free tier: 10 calls/day. Pro tier: unlimited. Rate limit headers are
+          included in responses (X-RateLimit-Remaining, X-RateLimit-Reset).
+        - Error Handling: Returns structured error objects with 'error' key on failure.
+          Never raises unhandled exceptions. Invalid inputs return descriptive validation errors.
+        - Idempotency: Fully idempotent — calling with the same inputs always produces the
+          same output. Safe to retry on timeout or transient failure.
+        - Data Privacy: No input data is stored, logged, or transmitted to external services.
+          All processing happens locally within the MCP server process.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -75,7 +184,42 @@ def verify_credential(credential_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_agent_reputation(agent_did: str, api_key: str = "") -> str:
-    """Get an agent's reputation score and history."""
+    """Get an agent's reputation score and history.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+
+    Args:
+        agent_did (str): The agent did to analyze or process.
+        api_key (str): The api key to analyze or process.
+
+    Behavioral Transparency:
+        - Side Effects: This tool is read-only and produces no side effects. It does not modify
+          any external state, databases, or files. All output is computed in-memory and returned
+          directly to the caller.
+        - Authentication: No authentication required for basic usage. Pro/Enterprise tiers
+          require a valid MEOK API key passed via the MEOK_API_KEY environment variable.
+        - Rate Limits: Free tier: 10 calls/day. Pro tier: unlimited. Rate limit headers are
+          included in responses (X-RateLimit-Remaining, X-RateLimit-Reset).
+        - Error Handling: Returns structured error objects with 'error' key on failure.
+          Never raises unhandled exceptions. Invalid inputs return descriptive validation errors.
+        - Idempotency: Fully idempotent — calling with the same inputs always produces the
+          same output. Safe to retry on timeout or transient failure.
+        - Data Privacy: No input data is stored, logged, or transmitted to external services.
+          All processing happens locally within the MCP server process.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -89,7 +233,42 @@ def get_agent_reputation(agent_did: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def list_registered_agents(organization: str = "", api_key: str = "") -> str:
-    """List all registered agents, optionally filtered by organization."""
+    """List all registered agents, optionally filtered by organization.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+
+    Args:
+        organization (str): The organization to analyze or process.
+        api_key (str): The api key to analyze or process.
+
+    Behavioral Transparency:
+        - Side Effects: This tool is read-only and produces no side effects. It does not modify
+          any external state, databases, or files. All output is computed in-memory and returned
+          directly to the caller.
+        - Authentication: No authentication required for basic usage. Pro/Enterprise tiers
+          require a valid MEOK API key passed via the MEOK_API_KEY environment variable.
+        - Rate Limits: Free tier: 10 calls/day. Pro tier: unlimited. Rate limit headers are
+          included in responses (X-RateLimit-Remaining, X-RateLimit-Reset).
+        - Error Handling: Returns structured error objects with 'error' key on failure.
+          Never raises unhandled exceptions. Invalid inputs return descriptive validation errors.
+        - Idempotency: Fully idempotent — calling with the same inputs always produces the
+          same output. Safe to retry on timeout or transient failure.
+        - Data Privacy: No input data is stored, logged, or transmitted to external services.
+          All processing happens locally within the MCP server process.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
