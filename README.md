@@ -5,6 +5,15 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/agent-identity-trust-mcp)](https://github.com/CSOAI-ORG/agent-identity-trust-mcp/stargazers)
 
+> ## 🧱 Part of the MEOK A2A Substrate
+>
+> This MCP is 1 of 12 agent-to-agent primitives. Run the whole pipeline
+> (identity → trust → policy → firewall → rate-limit → handoff → audit
+> → governance) as one signed endpoint for **£499/mo** including 100K
+> calls — or **£0.0002 per call** pay-as-you-go.
+>
+> 👉 [meok.ai/a2a](https://meok.ai/a2a) — see the Substrate
+
 # uagentU identityU trustU mcp
 
 **Add .well-known/mcp discovery, CI workflow, persistence layer**
