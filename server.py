@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Agent Identity & Trust MCP — MEOK AI Labs. DIDs, verifiable credentials, trust chains for AI agents."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+Agent Identity & Trust MCP — MEOK AI Labs. DIDs, verifiable credentials, trust chains for AI agents."""
 
 import sys, os
 sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
@@ -66,7 +68,7 @@ def register_agent_identity(agent_name: str, capabilities: str, organization: st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     did = f"did:meok:{hashlib.sha256(f'{agent_name}{secrets.token_hex(8)}'.encode()).hexdigest()[:24]}"
@@ -119,7 +121,7 @@ def issue_credential(agent_did: str, credential_type: str, claims: str, api_key:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     if agent_did not in _identities:
@@ -174,7 +176,7 @@ def verify_credential(credential_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     cred = _credentials.get(credential_id)
@@ -222,7 +224,7 @@ def get_agent_reputation(agent_did: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl(): return err
     identity = _identities.get(agent_did)
@@ -271,7 +273,7 @@ def list_registered_agents(organization: str = "", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     agents = list(_identities.values())
     if organization: agents = [a for a in agents if organization.lower() in a.get("organization", "").lower()]
