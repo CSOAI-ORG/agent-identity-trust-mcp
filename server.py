@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 Agent Identity & Trust MCP — MEOK AI Labs. DIDs, verifiable credentials, trust chains for AI agents."""
 
 import sys, os

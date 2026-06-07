@@ -138,3 +138,28 @@ buyers can deploy without vendor-lock-in objections.
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "agent-identity-trust-mcp": {
+      "command": "uvx",
+      "args": ["agent-identity-trust-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install agent-identity-trust-mcp` then run the `agent-identity-trust-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `register_agent_identity` to …"
+- "Use `issue_credential` to …"
+- "Use `verify_credential` to …"

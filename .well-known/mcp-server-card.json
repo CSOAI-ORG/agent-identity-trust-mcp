@@ -1,0 +1,28 @@
+{
+  "name": "agent-identity-trust-mcp",
+  "title": "Agent Identity Trust Mcp",
+  "description": "Agent Identity Trust tools for AI agents. Capabilities: register agent identity, issue credential, verify credential. Built by MEOK AI Labs.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "register_agent_identity"
+    },
+    {
+      "name": "issue_credential"
+    },
+    {
+      "name": "verify_credential"
+    },
+    {
+      "name": "get_agent_reputation"
+    },
+    {
+      "name": "list_registered_agents"
+    }
+  ]
+}

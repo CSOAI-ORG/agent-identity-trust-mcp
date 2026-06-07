@@ -1,0 +1,21 @@
+# agent-identity-trust-mcp
+
+> Agent Identity Trust tools for AI agents. Capabilities: register agent identity, issue credential, verify credential. Built by MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- register_agent_identity
+- issue_credential
+- verify_credential
+- get_agent_reputation
+- list_registered_agents
+
+## Install
+```
+pip install agent-identity-trust-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/agent-identity-trust-mcp/
+- Docs: https://meok.ai
