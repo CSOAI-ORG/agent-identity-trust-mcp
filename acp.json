@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "agent-identity-trust-mcp",
+    "description": "Agent Identity Trust MCP Server by MEOK AI Labs",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "agent-identity-trust-mcp"
+      }
+    ],
+    "capabilities": [
+      "register_agent_identity",
+      "issue_credential",
+      "verify_credential",
+      "get_agent_reputation",
+      "list_registered_agents"
+    ]
+  }
+}

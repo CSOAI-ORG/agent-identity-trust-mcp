@@ -1,0 +1,68 @@
+{
+  "name": "agent-identity-trust-mcp",
+  "description": "Agent Identity Trust MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/agent-identity-trust-mcp.html",
+  "version": "1.0.5",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "register_agent_identity",
+      "name": "Register Agent Identity",
+      "description": "register_agent_identity via agent-identity-trust-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "issue_credential",
+      "name": "Issue Credential",
+      "description": "issue_credential via agent-identity-trust-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "verify_credential",
+      "name": "Verify Credential",
+      "description": "verify_credential via agent-identity-trust-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_agent_reputation",
+      "name": "Get Agent Reputation",
+      "description": "get_agent_reputation via agent-identity-trust-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_registered_agents",
+      "name": "List Registered Agents",
+      "description": "list_registered_agents via agent-identity-trust-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
