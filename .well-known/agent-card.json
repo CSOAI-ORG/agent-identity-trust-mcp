@@ -1,0 +1,112 @@
+{
+  "name": "Agent Identity Trust Mcp",
+  "version": "1.0.5",
+  "url": "https://mcp.meok.ai/agent-identity-trust-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Agent Identity Trust tools for AI agents. Capabilities: register agent identity, issue credential, verify credential. Built by MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "register_agent_identity",
+      "name": "Register Agent Identity",
+      "description": "Register Agent Identity — a tool of the agent-identity-trust-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "issue_credential",
+      "name": "Issue Credential",
+      "description": "Issue Credential — a tool of the agent-identity-trust-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "verify_credential",
+      "name": "Verify Credential",
+      "description": "Verify Credential — a tool of the agent-identity-trust-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "get_agent_reputation",
+      "name": "Get Agent Reputation",
+      "description": "Get Agent Reputation — a tool of the agent-identity-trust-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "list_registered_agents",
+      "name": "List Registered Agents",
+      "description": "List Registered Agents — a tool of the agent-identity-trust-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "agent-identity-trust-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
