@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/agent-identity-trust-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/agent-identity-trust-mcp -->
 [![MCP Scorecard: 90/100](https://img.shields.io/badge/proofof.ai-90%2F100-5b21b6)](https://proofof.ai/scorecard/agent-identity-trust-mcp.html)
 
 # Agent Identity Trust MCP
@@ -166,3 +166,8 @@ Once configured, ask your assistant, for example:
 - "Use `register_agent_identity` to …"
 - "Use `issue_credential` to …"
 - "Use `verify_credential` to …"
+
+## See also
+
+MEOK compliance MCP fleet:
+[`agent-commerce-protocol-mcp`](https://github.com/CSOAI-ORG/agent-commerce-protocol-mcp), [`agent-cost-allocator-mcp`](https://github.com/CSOAI-ORG/agent-cost-allocator-mcp), [`agent-orchestrator-mcp`](https://github.com/CSOAI-ORG/agent-orchestrator-mcp), [`agent-replay-debugger-mcp`](https://github.com/CSOAI-ORG/agent-replay-debugger-mcp), [`agent-x402-paywall-mcp`](https://github.com/CSOAI-ORG/agent-x402-paywall-mcp)
